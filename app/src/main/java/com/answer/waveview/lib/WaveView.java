@@ -171,7 +171,9 @@ public class WaveView extends View {
         return (int) px;
     }
 
-    private class AnimUpdateListener implements ValueAnimator.AnimatorUpdateListener {
+    private static class AnimUpdateListener implements ValueAnimator.AnimatorUpdateListener {
+
+        //prevent memory leak
 
         private WeakReference<WaveView> waveViewWeakReference;
 
